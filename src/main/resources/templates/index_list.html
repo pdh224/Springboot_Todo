@@ -1,0 +1,27 @@
+<html layout:decorate="~{base}">
+<div layout:fragment="content" class="real">
+
+<h2>할일 목록</h2>
+
+<div class="list">    
+<ul th:each="toDoList : ${toDoList}" class="list-group">
+	
+	<li class="list-group-item list-group-item-warning" id="floatingInputValue">[[${toDoList.content}]]
+		<form th:action="@{/todolist/delete/} + ${toDoList.id}" method="post" value="id"><button>삭제</button></form>
+	</li>
+	<label for="floatingInputValue">[[${toDoList.createDate}]]</label>
+</ul>
+</div>
+
+<div class="input">
+<form th:action="@{/todolist/list}" method="post" class="row g-2">
+	<div class="col-auto">
+	<input class="form-text" aria-label="default input example" type="text" name="content" id="content">
+	</div>
+	<div class="col-auto">
+	<button type="submit" class="btn btn-primary mb-3">입력</button>
+	</div>
+</form>
+</div>
+</div>
+</html>

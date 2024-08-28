@@ -1,0 +1,27 @@
+@font-face {
+    font-family: 'Freesentation-9Black';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2404@1.0/Freesentation-9Black.woff2') format('woff2');
+    font-weight: 900;
+    font-style: normal;
+}
+
+html{
+	background-color: aquamarine;
+}
+
+
+.list{
+	width: 500px;
+	display: inline-block;
+}
+.real{
+	text-align: center;
+	font-family: 'Freesentation-9Black';
+	background-color: aquamarine;
+	}
+
+.input{
+	display: inline-block;
+	display: flex;
+	justify-content: center;
+}
